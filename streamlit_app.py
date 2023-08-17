@@ -32,11 +32,11 @@ import json
 
 # test = fruityvice_response
 # # write your own comment
-# fruityvice_normalized = pandas.json_normalize(test.json())
+# fruityvice_normalized = pd.json_normalize(test.json())
 # # write your own comment 
 # streamlit.dataframe(fruityvice_normalized)
 
 #The below is working 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+"kiwi") 
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json()) 
+fruityvice_normalized = pd.json_normalize(fruityvice_response.json()) 
 streamlit.dataframe(fruityvice_normalized)
